@@ -47,16 +47,16 @@ class LinkedList {
 }
 
 
-const list = new LinkedList();
-list.append('a');
-list.append('b');
-list.append('c');
-list.append('d');
-list.print();
+// const list = new LinkedList();
+// list.append('a');
+// list.append('b');
+// list.append('c');
+// list.append('d');
+// list.print();
 
-console.log(list.contains('a')); // true
-console.log(list.contains('b')); // true
-console.log(list.contains('c')); // true
-console.log(list.contains('d')); // true
-console.log(list.contains('z')); // false
-console.log(list.contains('x')); // false
+// console.log(list.contains('a')); // true
+// console.log(list.contains('b')); // true
+// console.log(list.contains('c')); // true
+// console.log(list.contains('d')); // true
+// console.log(list.contains('z')); // false
+// console.log(list.contains('x')); // false

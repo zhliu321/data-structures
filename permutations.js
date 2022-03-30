@@ -19,4 +19,4 @@ const permutations = (elements) => {
 // Time: O(n!)
 // Space: O(n^2)
 
-console.log(permutations(['a', 'b', 'c']));
+// console.log(permutations(['a', 'b', 'c']));

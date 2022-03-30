@@ -17,5 +17,5 @@ const combinations = (elements) => {
 // Time: O(2^n)
 // Space: O(n^2)
 
-console.log(combinations(['a', 'b', 'c']));
-console.log(combinations(['a', 'b', 'c', 'd', 'e', 'f']));
+// console.log(combinations(['a', 'b', 'c']));
+// console.log(combinations(['a', 'b', 'c', 'd', 'e', 'f']));
