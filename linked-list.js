@@ -26,10 +26,10 @@ class LinkedList {
 
   // Print all nodes
   print() {
-    let str = "";
+    let str = '';
     let curr = this.head;
     while (curr !== null) {
-      str += curr.val + "->";
+      str += curr.val + '->';
       curr = curr.next;
     }
     console.log(str);

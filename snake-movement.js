@@ -53,12 +53,12 @@ class Snake {
     stdin.setRawMode(true);
     stdin.resume();
     stdin.setEncoding('utf8');
-    stdin.on("data", (keypress) => {
+    stdin.on('data', (keypress) => {
       if (keypress === 'w') this.move('up');
       if (keypress === 'a') this.move('left');
       if (keypress === 's') this.move('down');
       if (keypress === 'd') this.move('right');
-      if (keypress === "\u0003") process.exit();
+      if (keypress === '\u0003') process.exit();
 
       this.draw();
     });
