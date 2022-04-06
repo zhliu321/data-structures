@@ -50,6 +50,28 @@ class LinkedList {
     if (curr.val === target) return true;
     return this._contains(target, curr.next);
   }
+
+  // Recursive delete value
+  remove(target) {
+    let curr = this.head;
+    if (this.head.val === target) {
+      this.head = curr.next;
+      curr = null;
+    }
+    return this._remove(target, curr, null);
+  }
+
+  _remove(target, curr, prev) {
+    if (curr === null) {
+      return this.head;
+    }
+
+    if (curr.val === target) {
+      prev.next = curr.next;
+    }
+
+    return this._remove(target, curr.next, curr);
+  }
 }
 
 // const list = new LinkedList();
@@ -57,7 +79,6 @@ class LinkedList {
 // list.append('b');
 // list.append('c');
 // list.append('d');
-
 // list.print();
 
 // console.log(list.contains('a')); // true
@@ -66,3 +87,6 @@ class LinkedList {
 // console.log(list.contains('d')); // true
 // console.log(list.contains('z')); // false
 // console.log(list.contains('x')); // false
+
+// console.log(list.remove('2'));
+// list.print();
