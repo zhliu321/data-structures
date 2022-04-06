@@ -44,6 +44,28 @@ class LinkedList {
     }
     return false;
   }
+
+  // Delete value if found in list
+  remove(target) {
+    let prev = null;
+    let curr = this.head;
+  
+    // If target is head
+    if (curr.val === target) {
+      this.head = curr.next;
+      curr = null;
+    }
+
+    while (curr !== null) {
+      if (curr.val === target) {
+        prev.next = curr.next;
+      }
+      prev = curr;
+      curr = curr.next;
+    }
+
+    return this.head;
+  }
 }
 
 
@@ -60,3 +82,6 @@ class LinkedList {
 // console.log(list.contains('d')); // true
 // console.log(list.contains('z')); // false
 // console.log(list.contains('x')); // false
+
+// console.log(list.remove('a'));
+// list.print();
