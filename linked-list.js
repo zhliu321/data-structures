@@ -66,6 +66,23 @@ class LinkedList {
 
     return this.head;
   }
+
+  // Reverse a linked list
+  reverse() {
+    let prev = null;
+    let curr = this.head;
+
+    while (curr !== null) {
+      // Temporary variable to store next node
+      const next = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = next;
+    }
+
+    this.head = prev;
+    return this.head;
+  }
 }
 
 
@@ -84,4 +101,5 @@ class LinkedList {
 // console.log(list.contains('x')); // false
 
 // console.log(list.remove('a'));
+// list.reverse();
 // list.print();
