@@ -72,6 +72,23 @@ class LinkedList {
 
     return this._remove(target, curr.next, curr);
   }
+
+  // Recursive reverse
+  reverse() {
+    return this._reverse(this.head, null);
+  }
+
+  _reverse(curr, prev) {
+    if (curr === null) {
+      this.head = prev;
+      return this.head;
+    }
+
+    const next = curr.next;
+    curr.next = prev;
+
+    return this._reverse(next, curr);
+  }
 }
 
 // const list = new LinkedList();
@@ -89,4 +106,5 @@ class LinkedList {
 // console.log(list.contains('x')); // false
 
 // console.log(list.remove('2'));
+// list.reverse();
 // list.print();
